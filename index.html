@@ -3,40 +3,38 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Iron Roots Moving Company | Oregon Movers</title>
+<title>Iron Roots Moving | Fast Oregon Movers</title>
 
 <style>
   body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #0f172a;
+    background: #0b1220;
     color: white;
   }
 
   /* HERO */
   .hero {
-    background: linear-gradient(135deg, #14532d, #0f172a);
+    background: linear-gradient(135deg, #14532d, #0b1220);
     text-align: center;
-    padding: 80px 20px 60px;
+    padding: 90px 20px 60px;
     position: relative;
-    overflow: hidden;
   }
 
   .logo {
-    width: 120px;
-    border-radius: 12px;
-    margin-bottom: 15px;
-    animation: pop 1s ease;
+    width: 110px;
+    border-radius: 14px;
+    animation: float 3s ease-in-out infinite;
   }
 
-  @keyframes pop {
-    from { transform: scale(0.5); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
+  @keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
   }
 
   h1 {
-    font-size: 42px;
-    margin: 10px 0;
+    font-size: 44px;
+    margin: 15px 0 10px;
   }
 
   .tagline {
@@ -44,6 +42,17 @@
     opacity: 0.9;
   }
 
+  .badge {
+    display: inline-block;
+    background: #22c55e;
+    color: black;
+    padding: 6px 12px;
+    border-radius: 20px;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
+  /* BUTTONS */
   .btn {
     display: inline-block;
     margin: 10px 5px;
@@ -51,16 +60,13 @@
     background: #facc15;
     color: black;
     font-weight: bold;
-    border-radius: 8px;
+    border-radius: 10px;
     text-decoration: none;
-    transition: 0.2s;
   }
 
-  .btn:hover {
-    transform: scale(1.05);
-  }
+  .btn:hover { transform: scale(1.05); }
 
-  .btn.secondary {
+  .btn2 {
     background: white;
   }
 
@@ -76,6 +82,7 @@
     margin-bottom: 15px;
   }
 
+  /* CARDS */
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -85,24 +92,24 @@
   .card {
     background: #1e293b;
     padding: 20px;
-    border-radius: 12px;
+    border-radius: 14px;
     transition: 0.2s;
   }
 
   .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
     background: #334155;
   }
 
-  /* CTA */
-  .cta {
-    background: linear-gradient(135deg, #166534, #0f172a);
-    text-align: center;
-    padding: 60px 20px;
+  /* REVIEWS */
+  .review {
+    background: #111827;
+    padding: 15px;
+    border-radius: 12px;
   }
 
-  /* FLOATING CALL BUTTON */
-  .call-now {
+  /* FLOAT BUTTON */
+  .call {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -112,7 +119,6 @@
     border-radius: 50px;
     font-weight: bold;
     text-decoration: none;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
   }
 
   /* FORM */
@@ -129,7 +135,6 @@
     padding: 14px;
     background: #22c55e;
     border: none;
-    color: black;
     font-weight: bold;
     border-radius: 8px;
     cursor: pointer;
@@ -139,7 +144,16 @@
     text-align: center;
     padding: 20px;
     color: #94a3b8;
-    font-size: 13px;
+  }
+
+  /* ANIMATION FADE */
+  .fade {
+    animation: fadeIn 1s ease-in;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 </style>
 </head>
@@ -147,69 +161,112 @@
 <body>
 
 <!-- HERO -->
-<div class="hero">
-<img src="48F50481-50F0-4485-B2F1-BA606A9C9F30.png" alt="Logo" style="width:120px;">
+<div class="hero fade">
 
-  <h1>Iron Roots Moving Company</h1>
-  <p class="tagline">Fast • Careful • Affordable • Reliable Movers in Oregon</p>
+  <img src="48F50481-50F0-4485-B2F1-BA606A9C9F30.png" class="logo" alt="logo">
+
+  <h1>Iron Roots Moving</h1>
+  <div class="badge">🔥 Fast • Careful • Affordable</div>
+
+  <p class="tagline">Oregon’s Trusted Moving Team</p>
 
   <a class="btn" href="tel:9714939042">📞 Call Now</a>
-  <a class="btn secondary" href="sms:9714939042">💬 Text Quote</a>
+  <a class="btn btn2" href="sms:9714939042">💬 Text Quote</a>
 </div>
 
-<!-- QUOTE FORM -->
+<!-- SERVICES -->
 <div class="section">
-  <h2>Get a Free Moving Quote</h2>
+  <h2>What We Do</h2>
+
+  <div class="grid">
+
+    <div class="card">🏠 Local Moves (Portland, Salem, Eugene, Vancouver WA)</div>
+    <div class="card">📦 Loading & Unloading Help</div>
+    <div class="card">🛋 Furniture Moving</div>
+    <div class="card">🚛 Same-Day Moving Available</div>
+
+  </div>
+</div>
+<div class="section">
+  <h2>🖼 Before & After Our Work</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <p>📦 Before Move</p>
+      <img src="before1.jpg" style="width:100%; border-radius:10px;">
+    </div>
+
+    <div class="card">
+      <p>🚛 After Move</p>
+      <img src="after1.jpg" style="width:100%; border-radius:10px;">
+    </div>
+
+    <div class="card">
+      <p>🏠 Clean Delivery</p>
+      <img src="after2.jpg" style="width:100%; border-radius:10px;">
+    </div>
+
+  </div>
+</div>
+<!-- QUOTE -->
+<div class="section">
+  <h2>Get Free Quote</h2>
 
   <form action="https://formsubmit.co/ironrootsmoving@gmail.com" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="tel" name="phone" placeholder="Phone Number" required>
-    <input type="text" name="pickup" placeholder="Pickup Location" required>
-    <input type="text" name="dropoff" placeholder="Drop-off Location" required>
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="tel" name="phone" placeholder="Phone" required>
     <textarea name="details" placeholder="What are you moving?" rows="4"></textarea>
 
     <button type="submit">Get My Quote</button>
   </form>
 </div>
-
-<!-- SERVICES -->
 <div class="section">
-  <h2>Our Services</h2>
+  <h2>📅 Book Your Move</h2>
+  <p>Select your preferred date & time. We’ll confirm your booking by text or call.</p>
+
+  <form action="https://formsubmit.co/ironrootsmoving@gmail.com" method="POST">
+
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+
+    <label style="color:white;">Select Date</label>
+    <input type="date" name="date" required>
+
+    <label style="color:white;">Preferred Time</label>
+    <input type="time" name="time" required>
+
+    <textarea name="details" placeholder="What are you moving?" rows="4"></textarea>
+
+    <button type="submit">Request Booking</button>
+  </form>
+</div>
+<!-- REVIEWS -->
+<div class="section">
+  <h2>Customer Reviews</h2>
 
   <div class="grid">
-    <div class="card">🏠 Local & Apartment Moves</div>
-    <div class="card">📦 Loading & Unloading Help</div>
-    <div class="card">🛋 Furniture Moving</div>
-    <div class="card">🚛 2-Man & 4-Man Crews</div>
+
+    <div class="review">⭐ “Super fast and careful. Highly recommend!”</div>
+    <div class="review">⭐ “Best movers I’ve used in Oregon.”</div>
+    <div class="review">⭐ “Affordable and professional.”</div>
+
   </div>
 </div>
 
 <!-- CTA -->
-<div class="cta">
-  <h2>Need Movers Today?</h2>
-  <p>Fast response. Same-day availability in some areas.</p>
-  <a class="btn" href="tel:9714939042">Call 971-493-9042</a>
-</div>
-
-<!-- WHY US -->
 <div class="section">
-  <h2>Why Choose Us</h2>
-  <p>
-    ✔ Professional moving equipment<br>
-    ✔ Careful handling of furniture<br>
-    ✔ Affordable pricing<br>
-    ✔ Fast, reliable service<br>
-    ✔ Oregon & Washington service area
-  </p>
+  <h2>Need Movers Today?</h2>
+  <p>We move fast — same-day availability in some areas.</p>
+
+  <a class="btn" href="tel:9714939042">Call Now</a>
 </div>
 
-<!-- FOOTER -->
 <footer>
   © 2026 Iron Roots Moving Company
 </footer>
 
-<!-- FLOATING BUTTON -->
-<a class="call-now" href="tel:9714939042">📞 Call</a>
+<a class="call" href="tel:9714939042">📞 Call</a>
 
 </body>
 </html>
