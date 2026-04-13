@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Iron Roots Moving Company</title>
+  <title>Iron Roots Moving Company | Portland & Oregon Movers</title>
 
   <style>
     body {
@@ -11,17 +11,18 @@
       font-family: Arial, sans-serif;
       color: #222;
       line-height: 1.6;
+      background: #f7f7f7;
     }
 
     header {
       background: #1f3d2b;
       color: white;
-      padding: 60px 20px;
       text-align: center;
+      padding: 70px 20px;
     }
 
     header h1 {
-      font-size: 40px;
+      font-size: 42px;
       margin-bottom: 10px;
     }
 
@@ -32,51 +33,78 @@
 
     .btn {
       display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
+      margin: 10px 5px;
+      padding: 14px 22px;
       background: #f4b400;
-      color: #000;
-      text-decoration: none;
+      color: black;
       font-weight: bold;
+      text-decoration: none;
       border-radius: 6px;
     }
 
+    .btn.secondary {
+      background: white;
+    }
+
     .section {
-      padding: 50px 20px;
       max-width: 1000px;
       margin: auto;
+      padding: 50px 20px;
+      background: white;
+      margin-top: 15px;
+      border-radius: 10px;
     }
 
     h2 {
       color: #1f3d2b;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
-    .services {
+    .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      gap: 15px;
     }
 
     .card {
-      background: #f5f5f5;
-      padding: 20px;
+      background: #f3f3f3;
+      padding: 15px;
       border-radius: 10px;
       text-align: center;
     }
 
-    .highlight {
+    .cta {
       background: #1f3d2b;
       color: white;
       text-align: center;
       padding: 50px 20px;
+      margin-top: 15px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: #1f3d2b;
+      color: white;
+      padding: 12px;
+      border: none;
+      width: 100%;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background: #111;
-      color: white;
+      font-size: 14px;
+      color: #666;
     }
 
     a.phone {
@@ -89,66 +117,62 @@
 
 <body>
 
-  <header>
-    <h1>Iron Roots Moving Company</h1>
-    <p>Fast • Careful • Affordable • Efficient</p>
-    <a class="btn" href="tel:9714939042">Call Now: 971-493-9042</a>
-  </header>
+<header>
+  <h1>Iron Roots Moving Company</h1>
+  <p>Fast • Careful • Affordable • Efficient</p>
 
-  <div class="section">
-    <h2>About Us</h2>
-    <p>
-      At Iron Roots Moving Company, we provide reliable and professional moving services across Oregon and Southwest Washington.
-      With years of hands-on experience, we make your move smooth, safe, and stress-free.
-    </p>
+  <a class="btn" href="tel:9714939042">📞 Call Now</a>
+  <a class="btn secondary" href="sms:9714939042">💬 Text for Quote</a>
+</header>
+
+<div class="section">
+  <h2>Get A Free Moving Quote</h2>
+  <p>Fill this out and we’ll contact you ASAP.</p>
+
+  <form action=action="https://formsubmit.co/ironrootsmoving@gmail.com" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+    <input type="text" name="location" placeholder="Pickup Location" required>
+    <input type="text" name="destination" placeholder="Drop-off Location" required>
+    <textarea name="details" placeholder="What are you moving?" rows="4"></textarea>
+
+    <button type="submit">Get My Free Quote</button>
+  </form>
+</div>
+
+<div class="section">
+  <h2>Our Services</h2>
+  <div class="grid">
+
+    <div class="card">Local Moves (Portland, Salem, Eugene, Vancouver WA)</div>
+    <div class="card">Loading & Unloading Help</div>
+    <div class="card">Furniture & Appliance Moving</div>
+    <div class="card">2-Man & 4-Man Crews</div>
+
   </div>
+</div>
 
-  <div class="section">
-    <h2>Our Services</h2>
-    <div class="services">
+<div class="cta">
+  <h2>Need Movers Today?</h2>
+  <p>We offer fast response & same-day availability in many cases.</p>
 
-      <div class="card">
-        <h3>Local Moves</h3>
-        <p>Portland, Salem, Eugene & surrounding areas.</p>
-      </div>
+  <a class="btn" href="tel:9714939042">Call Now</a>
+</div>
 
-      <div class="card">
-        <h3>Loading & Unloading</h3>
-        <p>Heavy lifting done safely and efficiently.</p>
-      </div>
+<div class="section">
+  <h2>Why People Choose Us</h2>
+  <p>
+    ✔ Professional equipment (dollies, straps, blankets)<br>
+    ✔ Careful handling of furniture<br>
+    ✔ Affordable pricing<br>
+    ✔ Fast response times<br>
+    ✔ Reliable crew you can trust
+  </p>
+</div>
 
-      <div class="card">
-        <h3>Furniture Moving</h3>
-        <p>Couches, beds, appliances & more.</p>
-      </div>
-
-      <div class="card">
-        <h3>2-Man & 4-Man Crews</h3>
-        <p>Flexible crew sizes for any job.</p>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="highlight">
-    <h2>Need Help Moving Today?</h2>
-    <p>Call now for fast booking and same-day availability.</p>
-    <a class="btn" href="tel:9714939042">Call 971-493-9042</a>
-  </div>
-
-  <div class="section">
-    <h2>Why Choose Us</h2>
-    <p>
-      ✔ Professional equipment (dollies, straps, blankets) <br/>
-      ✔ Fast response times <br/>
-      ✔ Careful handling of your belongings <br/>
-      ✔ Affordable pricing <br/>
-    </p>
-  </div>
-
-  <footer>
-    © 2026 Iron Roots Moving Company | Call <a class="phone" href="tel:9714939042">971-493-9042</a>
-  </footer>
+<footer>
+  © 2026 Iron Roots Moving Company | Call <a class="phone" href="tel:9714939042">971-493-9042</a>
+</footer>
 
 </body>
 </html>
