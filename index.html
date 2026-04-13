@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iron Roots Moving Company</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #000;
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 2px solid #16a34a;
+}
+
+.logo {
+    max-width: 250px;
+}
+
+nav {
+    text-align: center;
+    padding: 10px;
+    background: #020617;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    color: #16a34a;
+}
+
+.buttons a {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 25px;
+    background: #16a34a;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.section {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h2 {
+    color: #16a34a;
+}
+
+.grid {
+    display: grid;
+    gap: 20px;
+}
+
+.card {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact form input, .contact form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    margin-top: 15px;
+    padding: 15px;
+    width: 100%;
+    background: #16a34a;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.png" class="logo">
+    <p>Fast • Careful • Affordable • Efficient</p>
+</header>
+
+<nav>
+    <a href="#services">Services</a>
+    <a href="#why">Why Us</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero">
+    <h1>Oregon’s Trusted Moving Experts</h1>
+    <p>We move fast, protect your items, and get the job done right.</p>
+
+    <div class="buttons">
+        <a href="tel:9714939042">Call Now</a>
+        <a href="sms:9714939042">Text Now</a>
+    </div>
+</section>
+
+<section class="section" id="services">
+    <h2>Our Services</h2>
+    <div class="grid">
+        <div class="card">2-Man & 4-Man Crews</div>
+        <div class="card">Local Moves (Portland, Salem, Eugene, Vancouver WA)</div>
+        <div class="card">Loading & Unloading</div>
+        <div class="card">Heavy Furniture & Stairs</div>
+        <div class="card">Professional Equipment Included</div>
+    </div>
+</section>
+
+<section class="section" id="why">
+    <h2>Why Choose Us</h2>
+    <div class="grid">
+        <div class="card">5+ Years Experience</div>
+        <div class="card">Fast & Efficient Crews</div>
+        <div class="card">Careful With Your Belongings</div>
+        <div class="card">Affordable Pricing</div>
+    </div>
+</section>
+
+<section class="section" id="reviews">
+    <h2>Customer Reviews</h2>
+    <div class="grid">
+        <div class="card">"Fast, respectful, and very professional."</div>
+        <div class="card">"Handled my furniture like it was their own."</div>
+        <div class="card">"Best moving experience I’ve had."</div>
+    </div>
+</section>
+
+<section class="section contact" id="contact">
+    <h2>Get a Free Quote</h2>
+    <p>Call or text us for fastest response</p>
+
+    <h3>971-493-9042</h3>
+
+    <form onsubmit="sendText(event)">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="text" id="phone" placeholder="Your Phone Number" required>
+        <textarea id="details" placeholder="Describe your move"></textarea>
+        <button>Request Quote</button>
+    </form>
+</section>
+
+<footer>
+    <p>Iron Roots Moving Company © 2026</p>
+</footer>
+
+<script>
+function sendText(e) {
+    e.preventDefault();
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let details = document.getElementById("details").value;
+
+    let message = `Name: ${name}%0APhone: ${phone}%0ADetails: ${details}`;
+    window.location.href = `sms:9714939042?body=${message}`;
+}
+</script>
+
+</body>
+</html>
